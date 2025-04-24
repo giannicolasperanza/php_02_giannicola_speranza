@@ -144,98 +144,145 @@
 
 // inizio quinto esercizio
 
-class Vertebrati{
+// class Vertebrati{
     
-    public function __construct(){
-        $this->stampaVertebrati();
-    }
+//     public function __construct(){
+//         $this->stampaVertebrati();
+//     }
 
-    protected function stampaVertebrati(){
-        echo "Sono un animale Vertebrato  \n";
-    }
-}
+//     protected function stampaVertebrati(){
+//         echo "Sono un animale Vertebrato  \n";
+//     }
+// }
 
-class SangueCaldo extends Vertebrati{
+// class SangueCaldo extends Vertebrati{
 
-    public function __construct(){
-        parent::__construct();
-        $this->stampaSangueCaldo();
-    }
+//     public function __construct(){
+//         parent::__construct();
+//         $this->stampaSangueCaldo();
+//     }
 
-    protected function stampaSangueCaldo(){
-        echo "Sono un animale a Sangue caldo \n";
-    }
-}
+//     protected function stampaSangueCaldo(){
+//         echo "Sono un animale a Sangue caldo \n";
+//     }
+// }
 
-class Mammiferi extends SangueCaldo{
+// class Mammiferi extends SangueCaldo{
 
-    public function __construct(){
-        parent::__construct();
-        $this->stampaMammiferi();
-    }
+//     public function __construct(){
+//         parent::__construct();
+//         $this->stampaMammiferi();
+//     }
 
-protected function stampaMammiferi(){
-        echo "Sono un Mammifero \n";
-    }
-}
+// protected function stampaMammiferi(){
+//         echo "Sono un Mammifero \n";
+//     }
+// }
 
-class Uccelli extends SangueCaldo{
+// class Uccelli extends SangueCaldo{
     
-    public function __construct(){
-        parent::__construct();
-        $this->stampaUccelli();
-    }
+//     public function __construct(){
+//         parent::__construct();
+//         $this->stampaUccelli();
+//     }
     
-    protected function stampaUccelli(){
-        echo "Sono un Uccello \n";
-    }
-}
+//     protected function stampaUccelli(){
+//         echo "Sono un Uccello \n";
+//     }
+// }
 
 
 
 
-class SangueFreddo extends Vertebrati{
-    public function __construct(){
-        parent::__construct();
-        $this->stampaSangueFreddo();
-    }
+// class SangueFreddo extends Vertebrati{
+//     public function __construct(){
+//         parent::__construct();
+//         $this->stampaSangueFreddo();
+//     }
     
-    protected function stampaSangueFreddo(){
-        echo "Sono un animale a Sangue Freddo \n";
-    }
-}
+//     protected function stampaSangueFreddo(){
+//         echo "Sono un animale a Sangue Freddo \n";
+//     }
+// }
 
-class Pesci extends SangueFreddo{
-    public function __construct(){
-        parent::__construct();
-        $this->stampaPesci();
-    }
+// class Pesci extends SangueFreddo{
+//     public function __construct(){
+//         parent::__construct();
+//         $this->stampaPesci();
+//     }
     
-    protected function stampaPesci(){
-        echo "Sono un Pesce \n";
-    }
-}
+//     protected function stampaPesci(){
+//         echo "Sono un Pesce \n";
+//     }
+// }
 
-class Rettili extends SangueFreddo{
-    public function __construct(){
-        parent::__construct();
-        $this->stampaRettili();
-    }
+// class Rettili extends SangueFreddo{
+//     public function __construct(){
+//         parent::__construct();
+//         $this->stampaRettili();
+//     }
     
-    protected function stampaRettili(){
-        echo "Sono un Rettile \n";
-    }
-}
+//     protected function stampaRettili(){
+//         echo "Sono un Rettile \n";
+//     }
+// }
 
-class Anfibi extends SangueFreddo{
-    public function __construct(){
-        parent::__construct();
-        $this->stampaAnfibi();
-    }
+// class Anfibi extends SangueFreddo{
+//     public function __construct(){
+//         parent::__construct();
+//         $this->stampaAnfibi();
+//     }
     
-    protected function stampaAnfibi(){
-        echo "Sono un Amfibio \n";
-    }
-}
+//     protected function stampaAnfibi(){
+//         echo "Sono un Amfibio \n";
+//     }
+// }
 
-$piccione = new Uccelli();
+// $piccione = new Uccelli();
+
+// fine quinto esercizio
+
+// inizio sesto esercizio
+class Car {
+    protected $num_telaio;
+
+    public function __construct($telaio){
+        $this->num_telaio = $telaio;
+    }
+  }
+  
+  class Fiat extends Car {
+    protected $license;
+    protected $name;
+
+    public function __construct($telaio,$licenza,$nome){
+        parent::__construct($telaio);
+        $this->license = $licenza;
+        $this->name = $nome;
+        }
+    }
+  
+
+    class Opel extends Car {
+        protected $license;
+        protected $name;
+    
+        public function __construct($telaio,$licenza,$nome){
+            parent::__construct($telaio);
+            $this->license = $licenza;
+            $this->name = $nome;
+            $this->schedaTecnica();
+            }
+
+            public function schedaTecnica(){
+                echo "La mia macchina è una " . $this->name . " , con targa " . $this->license . " e numero di telaio " . $this->num_telaio . " \n";
+            }
+        }
+
+
+        $opelastra = new Opel(1234,"ND 123 OJ","Opel Astra");
+
+
+// fine sesto esercizio
+
+
